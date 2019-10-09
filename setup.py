@@ -6,6 +6,7 @@ from subprocess import PIPE
 
 VERSION = '1.13.1'
 
+
 def has_gpu():
     try:
         p = Popen(["nvidia-smi"], stdout=PIPE)
@@ -15,11 +16,9 @@ def has_gpu():
         return False
 
 
-if has_gpu():
-    install_requires.append(f"tensorflow-gpu=={VERSION}")
-else:
-    install_requires.append(f"tensorflow=={VERSION}")
-
+install_requires=[
+    f"tensorflow-gpu=={VERSION}") if has_gpu() else f"tensorflow=={VERSION}"
+]
 
 setup(
     name="tensorflow-auto-detect",

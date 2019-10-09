@@ -17,7 +17,7 @@ def has_gpu():
 
 
 install_requires=[
-    f"tensorflow-gpu=={VERSION}") if has_gpu() else f"tensorflow=={VERSION}"
+    f"tensorflow-gpu=={VERSION}" if has_gpu() else f"tensorflow=={VERSION}"
 ]
 
 setup(

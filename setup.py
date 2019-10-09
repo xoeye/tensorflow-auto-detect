@@ -4,7 +4,7 @@ from subprocess import Popen
 from subprocess import PIPE
 
 
-VERSION = 1.13.1
+VERSION = '1.13.1'
 
 def has_gpu():
     try:

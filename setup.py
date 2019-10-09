@@ -23,7 +23,7 @@ else:
 
 setup(
     name="tensorflow-auto-detect",
-    version="1.0",
+    version=VERSION,
     author="Matt Eby",
     description="Tensorflow package to auto detect and install tensorflow or tensorflow-gpu based on CUDA availability.",
     url="https://github.com/xoeye/tensorflow-auto-detect",
